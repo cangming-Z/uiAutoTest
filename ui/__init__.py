@@ -7,6 +7,7 @@ from flask_cors import CORS
 
 from ui.apis.v1 import api_v1
 from ui.blueprints.auth import auth_bp
+from ui.blueprints.case_list import case_list_bp
 from ui.blueprints.index import index_bp
 from ui.blueprints.main import main_bp
 
@@ -25,6 +26,7 @@ def register_blueprints(app):
     app.register_blueprint(index_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(main_bp)
+    app.register_blueprint(case_list_bp)
     # app.register_blueprint(todo_bp)
     # app.register_blueprint(home_bp)
     app.register_blueprint(api_v1, url_prefix='/api/v1')
